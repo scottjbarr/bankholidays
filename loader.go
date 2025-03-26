@@ -25,6 +25,9 @@ func LoadFromReader(r io.Reader) ([]Holiday, error) {
 		return nil, err
 	}
 
+	// skip the header row
+	records = records[1:]
+
 	holidays := make([]Holiday, len(records))
 
 	for i, rec := range records {

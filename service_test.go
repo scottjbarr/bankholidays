@@ -19,5 +19,5 @@ func TestBuild(t *testing.T) {
 
 	require.Equal(t, want, got)
 
-	require.Equal(t, 332, len(holidays))
+	require.Equal(t, 331, len(holidays))
 }
