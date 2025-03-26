@@ -2,8 +2,10 @@ package bankholidays
 
 import (
 	"bytes"
+	"cmp"
 	"encoding/csv"
 	"io"
+	"slices"
 
 	_ "embed"
 )
@@ -38,6 +40,14 @@ func LoadFromReader(r io.Reader) ([]Holiday, error) {
 
 		holidays[i] = *h
 	}
+
+	// sort them from oldest to newest
+	slices.SortFunc(holidays, func(a, b Holiday) int {
+		return cmp.Or(
+			cmp.Compare(a.Date, b.Date),
+			cmp.Compare(a.Country, b.Country),
+		)
+	})
 
 	return holidays, nil
 }
