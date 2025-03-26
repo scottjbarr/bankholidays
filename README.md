@@ -29,6 +29,21 @@ opts := FilterOpts{
 filtered := srv.Filter(opts)
 ```
 
+## CLI
+
+Simple. No args. Just grep the output if you need it.
+
+```
+$ go run cmd/bank-holidays/main.go
+
+|    Date    | Country |                  Name                  |
+|------------|---------|----------------------------------------|
+| 2020-01-01 | AU      | New Year’s Day                         |
+| 2020-01-01 | EU      | New Year’s Day                         |
+
+....
+```
+
 ## More?
 
 If you want to load your own data, you can do that with the `LoadFromReader(io.Reader)` function.
