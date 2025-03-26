@@ -65,4 +65,4 @@ The MIT License (MIT)
 
 Copyright (c) 2025 Scott Barr
 
-See [LICENSE.md](LICENSE.md)
+See [LICENSE](LICENSE)
