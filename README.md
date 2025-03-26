@@ -55,3 +55,11 @@ $ go run cmd/bank-holidays/main.go
 If you want to load your own data, you can do that with the `LoadFromReader(io.Reader)` function.
 
 See `data/holidays.csv` for the format.
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Scott Barr
+
+See [LICENSE.md](LICENSE.md)
