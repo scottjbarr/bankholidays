@@ -53,6 +53,12 @@ If you want to load your own data, you can do that with the `LoadFromReader(io.R
 
 See `data/holidays.csv` for the format.
 
+## Contributing
+
+Please open an issue before sending a PR.
+
+If it comes time to submit a PR, please write tests, stick to the style, and limit the change to the scope of the PR.
+
 ## License
 
 The MIT License (MIT)
