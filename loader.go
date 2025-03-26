@@ -3,6 +3,7 @@ package bankholidays
 import (
 	"bytes"
 	"encoding/csv"
+	"io"
 
 	_ "embed"
 )
@@ -11,7 +12,13 @@ import (
 var data string
 
 func Load() ([]Holiday, error) {
-	reader := csv.NewReader(bytes.NewBufferString(data))
+	r := bytes.NewBufferString(data)
+
+	return LoadFromReader(r)
+}
+
+func LoadFromReader(r io.Reader) ([]Holiday, error) {
+	reader := csv.NewReader(r)
 
 	records, err := reader.ReadAll()
 	if err != nil {
