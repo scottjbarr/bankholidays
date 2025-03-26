@@ -20,15 +20,12 @@ if err != nil {
 }
 
 // all of the holidays
-all, err := srv.All()
-if err != nil {
-    panic(err)
-}
+all := srv.All()
 
 // filter holidays down to US events, between someData and someOtherDate (inclusive)
 opts := FilterOpts{
     Country: "US",
-	ExcludeBefore: someDate,
+    ExcludeBefore: someDate,
     ExcludeBefore: someOtherDate,
 }
 
