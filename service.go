@@ -16,3 +16,11 @@ func Build() (*Service, error) {
 
 	return &service, nil
 }
+
+func (s *Service) All() Holidays {
+	return s.Holidays
+}
+
+func (s *Service) Filter(opts *FilterOpts) Holidays {
+	return s.Holidays.Filter(opts)
+}
